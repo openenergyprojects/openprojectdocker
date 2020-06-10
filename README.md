@@ -1,3 +1,6 @@
+# What is this
+This project holds info how to run the popular https://github.com/opf/openproject in docker, using only docker-compose.
+
 # IT infrastructure - prerequisites
 ## machine:
 - docker daemon, working with performant overlay (NOT loopback). For overlay, make sure /var/lib/docker is xfs.

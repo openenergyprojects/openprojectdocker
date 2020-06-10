@@ -13,8 +13,8 @@
 - deploy the openproject, using steps below
 
 # SETUP EMAIL SERVER DETAILS:
-Without this step, people will not get notification emails from the system.
-You may want to create a dedicated email address for it (or reuse an exisitng one).
+Without this step, people will not get notification emails from the system.     
+You may want to create a dedicated email address for it (or reuse an exisitng one).     
 1. The email server setup is in docker.env, with an example in the ANNEX1 below. Adapt as required.
 2. Also login as admin, and update: https://<new_url>/admin/mail_notifications
 3. Test it works by triggering a notification
@@ -39,25 +39,25 @@ You may want to create a dedicated email address for it (or reuse an exisitng on
 5. Example script, run: ./stop_and_backup.sh
 
 # RESTORE:
-Make sure all parties agree to restore from an older backup, as they will loose all the changes in between.
-Always backup before upgrades.
+Make sure all parties agree to restore from an older backup, as they will loose all the changes in between.    
+Always backup before upgrades.   
 1. simply restore the two folders 
 
 # UPGRADE:
-Read release notes of new releases here: https://github.com/opf/openproject/releases
-Find latest images on: https://hub.docker.com/r/openproject/community/tags
-Ideally wait ~1-2 weeks from the time there is a new release, to make sure it's stable enough.
-Read the issues section, to verify there are no major known issues.
+Read release notes of new releases here: https://github.com/opf/openproject/releases   
+Find latest images on: https://hub.docker.com/r/openproject/community/tags    
+Ideally wait ~1-2 weeks from the time there is a new release, to make sure it's stable enough.    
+Read the issues section, to verify there are no major known issues.    
 1. Make backup
 2. change the IMG parameter in the restart.sh
 3. run: restart.sh
 
 
 # ANNEX1 - docker.env
-Example setup. Update as required.
-Remember: there is one more email setup once you login: https://<new_url>/admin/mail_notifications
-Here is the docker.env (note: it can hold other params as well, not only email related)
-```
+Example setup. Update as required.    
+Remember: there is one more email setup once you login: https://<new_url>/admin/mail_notifications    
+Here is the docker.env (note: it can hold other params as well, not only email related)    
+```shell
 SECRET_KEY_BASE=.....
 
 # EMAIL RELATED:

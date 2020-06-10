@@ -6,7 +6,8 @@
 ## network
 - confirm the server is reachable from the outside world/loadballancer (sw or hw).
 - for HTTPS, you may want to do tls termination (keys/certs) in the loadbalancer (e.g. haproxy) or in an nginx in front.
-- get ssl certs from letsencrypt in an automated manner (with automatic cert rotation).
+- get ssl certs from letsencrypt in an automated manner (with automatic cert rotation). 
+- For Letsencrypt, here are projects to automate cert renew: https://hub.docker.com/r/bringnow/haproxy-letsencrypt/ or https://github.com/gitsf/docker-letsencrypt-manager
 - confirm the dns is working and pointing to your ip
 - confirm the tls termination is working, and certificates are valid
 - TEST it, by running a simple hello world docker container behind the loadballancer and confirm is fine
